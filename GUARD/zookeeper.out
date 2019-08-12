@@ -1,0 +1,259 @@
+2019-02-28 10:51:35,528 [myid:] - INFO  [main:QuorumPeerConfig@134] - Reading configuration from: /usr/lib/zookeeper/zookeeper-3.4.10/bin/../conf/zoo.cfg
+2019-02-28 10:51:35,539 [myid:] - INFO  [main:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:35,539 [myid:] - INFO  [main:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:35,540 [myid:] - INFO  [main:QuorumPeer$QuorumServer@167] - Resolved hostname: master to address: master/192.168.138.201
+2019-02-28 10:51:35,540 [myid:] - INFO  [main:QuorumPeerConfig@396] - Defaulting to majority quorums
+2019-02-28 10:51:35,543 [myid:0] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-02-28 10:51:35,543 [myid:0] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2019-02-28 10:51:35,543 [myid:0] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2019-02-28 10:51:35,552 [myid:0] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-02-28 10:51:35,560 [myid:0] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-02-28 10:51:35,571 [myid:0] - INFO  [main:QuorumPeer@1134] - minSessionTimeout set to -1
+2019-02-28 10:51:35,572 [myid:0] - INFO  [main:QuorumPeer@1145] - maxSessionTimeout set to -1
+2019-02-28 10:51:35,572 [myid:0] - INFO  [main:QuorumPeer@1419] - QuorumPeer communication is not secured!
+2019-02-28 10:51:35,572 [myid:0] - INFO  [main:QuorumPeer@1448] - quorum.cnxn.threads.size set to 20
+2019-02-28 10:51:35,574 [myid:0] - INFO  [main:FileSnap@83] - Reading snapshot /usr/lib/zookeeper/zookeeper-3.4.10/data/version-2/snapshot.6b0003635a
+2019-02-28 10:51:35,771 [myid:0] - INFO  [ListenerThread:QuorumCnxManager$Listener@739] - My election bind port: master/192.168.138.201:3888
+2019-02-28 10:51:35,777 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer@865] - LOOKING
+2019-02-28 10:51:35,778 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@818] - New election. My id =  0, proposed zxid=0x6f0000005e
+2019-02-28 10:51:35,782 [myid:0] - INFO  [WorkerReceiver[myid=0]:FastLeaderElection@600] - Notification: 1 (message format version), 0 (n.leader), 0x6f0000005e (n.zxid), 0x1 (n.round), LOOKING (n.state), 0 (n.sid), 0x6f (n.peerEpoch) LOOKING (my state)
+2019-02-28 10:51:35,783 [myid:0] - WARN  [WorkerSender[myid=0]:QuorumCnxManager@588] - Cannot open channel to 1 at election address slave1/192.168.138.202:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:538)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-28 10:51:35,785 [myid:0] - INFO  [WorkerSender[myid=0]:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:35,786 [myid:0] - WARN  [WorkerSender[myid=0]:QuorumCnxManager@588] - Cannot open channel to 2 at election address slave2/192.168.138.203:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:538)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-28 10:51:35,786 [myid:0] - INFO  [WorkerSender[myid=0]:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:35,987 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 1 at election address slave1/192.168.138.202:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:35,987 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:35,988 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 2 at election address slave2/192.168.138.203:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:35,988 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:35,988 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@852] - Notification time out: 400
+2019-02-28 10:51:36,389 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 1 at election address slave1/192.168.138.202:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:36,390 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:36,390 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 2 at election address slave2/192.168.138.203:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:36,390 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:36,390 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@852] - Notification time out: 800
+2019-02-28 10:51:37,191 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 1 at election address slave1/192.168.138.202:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:37,192 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:37,193 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 2 at election address slave2/192.168.138.203:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:37,193 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:37,193 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@852] - Notification time out: 1600
+2019-02-28 10:51:38,794 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 1 at election address slave1/192.168.138.202:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:38,794 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:38,795 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 2 at election address slave2/192.168.138.203:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:38,795 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:38,795 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@852] - Notification time out: 3200
+2019-02-28 10:51:41,996 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 1 at election address slave1/192.168.138.202:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:41,997 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:41,998 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@588] - Cannot open channel to 2 at election address slave2/192.168.138.203:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectAll(QuorumCnxManager.java:614)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader(FastLeaderElection.java:843)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:913)
+2019-02-28 10:51:41,998 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:41,998 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@852] - Notification time out: 6400
+2019-02-28 10:51:43,428 [myid:0] - INFO  [master/192.168.138.201:3888:QuorumCnxManager$Listener@746] - Received connection request /192.168.138.202:51478
+2019-02-28 10:51:43,432 [myid:0] - INFO  [WorkerReceiver[myid=0]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x6f0000005e (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x6f (n.peerEpoch) LOOKING (my state)
+2019-02-28 10:51:43,432 [myid:0] - INFO  [WorkerReceiver[myid=0]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x6f0000005e (n.zxid), 0x1 (n.round), LOOKING (n.state), 0 (n.sid), 0x6f (n.peerEpoch) LOOKING (my state)
+2019-02-28 10:51:43,433 [myid:0] - WARN  [WorkerSender[myid=0]:QuorumCnxManager@588] - Cannot open channel to 2 at election address slave2/192.168.138.203:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:562)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:538)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:452)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:433)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-28 10:51:43,433 [myid:0] - INFO  [WorkerSender[myid=0]:QuorumPeer$QuorumServer@167] - Resolved hostname: slave2 to address: slave2/192.168.138.203
+2019-02-28 10:51:43,633 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer@935] - FOLLOWING
+2019-02-28 10:51:43,636 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Learner@86] - TCP NoDelay set to: true
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:host.name=master
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.version=1.8.0_141
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java/jre
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.class.path=/usr/lib/zookeeper/zookeeper-3.4.10/bin/../build/classes:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../build/lib/*.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../lib/slf4j-log4j12-1.6.1.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../lib/slf4j-api-1.6.1.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../lib/netty-3.10.5.Final.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../lib/log4j-1.2.16.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../lib/jline-0.9.94.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../zookeeper-3.4.10.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../src/java/lib/*.jar:/usr/lib/zookeeper/zookeeper-3.4.10/bin/../conf:.:/usr/lib/jvm/java/lib:/usr/lib/jvm/java/jre/lib
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.library.path=:/opt/instantclient_12_2:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.name=Linux
+2019-02-28 10:51:43,640 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-02-28 10:51:43,641 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.version=4.4.0-142-generic
+2019-02-28 10:51:43,641 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.name=zwh
+2019-02-28 10:51:43,641 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.home=/home/zwh
+2019-02-28 10:51:43,641 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.dir=/home/zwh/TensorFlowOnSpark/examples/websocket/GUARD
+2019-02-28 10:51:43,642 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /usr/lib/zookeeper/zookeeper-3.4.10/logs/version-2 snapdir /usr/lib/zookeeper/zookeeper-3.4.10/data/version-2
+2019-02-28 10:51:43,643 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Follower@64] - FOLLOWING - LEADER ELECTION TOOK - 7865
+2019-02-28 10:51:43,644 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:QuorumPeer$QuorumServer@167] - Resolved hostname: slave1 to address: slave1/192.168.138.202
+2019-02-28 10:51:43,645 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Learner@237] - Unexpected exception, tries=0, connecting to slave1/192.168.138.202:2888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.Learner.connectToLeader(Learner.java:229)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:71)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:937)
+2019-02-28 10:51:44,664 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Learner@332] - Getting a diff from the leader 0x6f0000005e
+2019-02-28 10:51:50,490 [myid:0] - INFO  [master/192.168.138.201:3888:QuorumCnxManager$Listener@746] - Received connection request /192.168.138.203:59978
+2019-02-28 10:51:50,500 [myid:0] - INFO  [WorkerReceiver[myid=0]:FastLeaderElection@600] - Notification: 1 (message format version), 2 (n.leader), 0x6f0000005e (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x6f (n.peerEpoch) FOLLOWING (my state)
+2019-02-28 10:52:06,601 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /192.168.138.201:54298
+2019-02-28 10:52:06,613 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /192.168.138.201:54298
+2019-02-28 10:52:06,618 [myid:0] - WARN  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2181:Follower@118] - Got zxid 0x7000000001 expected 0x1
+2019-02-28 10:52:06,618 [myid:0] - INFO  [SyncThread:0:FileTxnLog@203] - Creating new log file: log.7000000001
+2019-02-28 10:52:06,676 [myid:0] - INFO  [CommitProcessor:0:ZooKeeperServer@687] - Established session 0x693203d09a0000 with negotiated timeout 6000 for client /192.168.138.201:54298
+2019-02-28 10:52:20,455 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /192.168.138.202:47656
+2019-02-28 10:52:20,460 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /192.168.138.202:47656
+2019-02-28 10:52:20,465 [myid:0] - INFO  [CommitProcessor:0:ZooKeeperServer@687] - Established session 0x693203d09a0001 with negotiated timeout 6000 for client /192.168.138.202:47656
+2019-02-28 10:52:56,566 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /192.168.138.201:54432
+2019-02-28 10:52:56,569 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /192.168.138.201:54432
+2019-02-28 10:52:56,572 [myid:0] - INFO  [CommitProcessor:0:ZooKeeperServer@687] - Established session 0x693203d09a0002 with negotiated timeout 6000 for client /192.168.138.201:54432
+2019-02-28 10:54:48,585 [myid:0] - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@368] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x693203d09a0002, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:239)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:203)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-28 10:54:48,590 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1044] - Closed socket connection for client /192.168.138.201:54432 which had sessionid 0x693203d09a0002
+2019-02-28 11:04:28,182 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /192.168.138.203:51474
+2019-02-28 11:04:28,182 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /192.168.138.203:51474
+2019-02-28 11:04:28,186 [myid:0] - INFO  [CommitProcessor:0:ZooKeeperServer@687] - Established session 0x693203d09a0003 with negotiated timeout 6000 for client /192.168.138.203:51474
+2019-02-28 11:05:39,711 [myid:0] - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@368] - caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x693203d09a0003, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:239)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:203)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-28 11:05:39,712 [myid:0] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1044] - Closed socket connection for client /192.168.138.203:51474 which had sessionid 0x693203d09a0003
