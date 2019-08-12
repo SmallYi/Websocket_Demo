@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>快手ID</p>
+            </div>
+            <div id=userid class="weui-cell__ft">{{ request.user.userid }}</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell_bd weui-cell_primary">
+                <p>取关列表:</p>
+                <ul>
+                    {% for canobj in canobjs %}
+
+                        <li class="li" value={{ canobj.cancle_user.userid }}>{{ canobj.cancle_user.username }}
+                            <button class="btn weui-btn weui-btn_mini weui-btn_primary"
+                                    onclick="CancelFocus(this,$(this).parent().val(),0)">去取关对方
+                            </button>
+                        </li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell_bd weui-cell_primary">
+                <p>失败列表:</p>
+                <ul>
+                    {% for faiobj in faiobjs1 %}
+
+                        <li class="li" value="{{ faiobj.user2.userid }}">{{ faiobj.user2.username }}
+{#                            <button class="btn weui-btn weui-btn_mini weui-btn_primary"#}
+{#                                    onclick="ReFocus(this,$(this).parent().val(),0)">去关注对方#}
+{#                            </button>#}
+                        </li>
+                    {% endfor %}
+                    {% for faiobj in faiobjs2 %}
+
+                        <li class="li" value="{{ faiobj.user1.userid }}">{{ faiobj.user1.username }}
+{#                            <button class="btn weui-btn weui-btn_mini weui-btn_primary"#}
+{#                                    onclick="ReFocus(this,$(this).parent().val(),0)">去关注对方#}
+{#                            </button>#}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell_bd weui-cell_primary">
+                <p>互粉列表:</p>
+                <ul>
+                    {% for sucobj in sucobjs1 %}
+                        <li class="li" value={{ sucobj.user2.userid }}>{{ sucobj.user2.username }}
+                            <button class="btn weui-btn weui-btn_mini weui-btn_warn"
+                                    onclick="CancelFocus(this,$(this).parent().val(),1)">举报对方取关
+                            </button>
+                            <!--<button class="weui_btn weui_btn_mini weui_btn_warn" onclick="CancelFocus($(this).parent().val(),1)">去取关对方</button>-->
+                        </li>
+                    {% endfor %}
+                    {% for sucobj in sucobjs2 %}
+                        <li class="li" value={{ sucobj.user1.userid }}>{{ sucobj.user1.username }}
+                            <button class="btn weui-btn weui-btn_mini weui-btn_warn"
+                                    onclick="CancelFocus(this,$(this).parent().val(),1)">举报对方取关
+                            </button>
+                            <!--<button class="weui_btn weui_btn_mini weui_btn_warn" onclick="CancelFocus($(this).parent().val(),1)">去取关对方</button>-->
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="btn">
+        <button class="weui-btn weui-btn_primary" id="CheckFocus">查看自己的关注列表</button>
+        <button class="weui-btn weui-btn_primary" id="CheckFollow">查看自己的粉丝列表</button>
+        <button class="weui-btn weui-btn_primary" id="RetToHall">返回互粉大厅</button>
+    </div>
+
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="{% static "js/list.js" %}"></script>
+{% endblock %}

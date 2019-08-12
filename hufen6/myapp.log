@@ -1,0 +1,48 @@
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:577] DEBUG --- request header ---
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:578] DEBUG GET /ws HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 127.0.0.1:8081
+Origin: http://127.0.0.1:8081
+Sec-WebSocket-Key: fPSZ5UItQmGWYNTpOn3HAQ==
+Sec-WebSocket-Version: 13
+
+
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:579] DEBUG -----------------------
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:618] DEBUG --- response header ---
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:627] DEBUG HTTP/1.1 101 Switching Protocols
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:627] DEBUG Sec-Websocket-Accept: Zr3cSwo+n85jW1MbE6F8fEqEjLU=
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:627] DEBUG Content-Length: 0
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:627] DEBUG Connection: Upgrade
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:627] DEBUG Date: Fri, 19 Jan 2018 07:03:30 GMT
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:627] DEBUG Upgrade: websocket
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:627] DEBUG Server: TornadoServer/4.5.2
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:640] DEBUG -----------------------
+Fri, 19 Jan 2018 15:03:30 connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Fri, 19 Jan 2018 15:03:30 connectionpool.py[line:396] DEBUG http://127.0.0.1:80 "POST /hufen/getsessionid HTTP/1.1" 200 49
+Fri, 19 Jan 2018 15:03:30 __init__.py[line:678] DEBUG send: b'\x81\xc3\x0e\x1b\xc3\x16u9\xb0s}h\xaay`r\xa744;\xe1avu\xaa ~)\xf5b=c\xf6|m|\xbbeck\xf3#v+\xb3"ow\xae|z}\xf64";\xe1wmo\xaay`9\xf96,r\xad\x7fz9\xbe'
+Fri, 19 Jan 2018 15:03:31 __init__.py[line:678] DEBUG send: b'\x81\x92\xb4\xcde\xd0\xcf\xef\x04\xb3\xc0\xa4\n\xbe\x96\xf7E\xf2\xc4\xac\x0c\xa2\x96\xb0'
+Fri, 19 Jan 2018 15:03:40 __init__.py[line:678] DEBUG send: b'\x81\x97\xee5\xc3\x8c\x95\x17\xa2\xef\x9a\\\xac\xe2\xcc\x0f\xe3\xae\xa6P\xa2\xfe\x9aw\xa6\xed\x9a\x17\xbe'
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:577] DEBUG --- request header ---
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:578] DEBUG GET /ws HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 127.0.0.1:8081
+Origin: http://127.0.0.1:8081
+Sec-WebSocket-Key: bMiryQe5RIitE7n08Ji1ZA==
+Sec-WebSocket-Version: 13
+
+
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:579] DEBUG -----------------------
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:618] DEBUG --- response header ---
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:627] DEBUG HTTP/1.1 101 Switching Protocols
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:627] DEBUG Sec-Websocket-Accept: X6EeK5rdStO4DMgU4CBROykEhRI=
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:627] DEBUG Content-Length: 0
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:627] DEBUG Connection: Upgrade
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:627] DEBUG Date: Fri, 19 Jan 2018 07:03:44 GMT
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:627] DEBUG Upgrade: websocket
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:627] DEBUG Server: TornadoServer/4.5.2
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:640] DEBUG -----------------------
+Fri, 19 Jan 2018 15:03:44 connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Fri, 19 Jan 2018 15:03:44 connectionpool.py[line:396] DEBUG http://127.0.0.1:80 "POST /hufen/getsessionid HTTP/1.1" 500 56703
+Fri, 19 Jan 2018 15:03:44 __init__.py[line:1105] ERROR Expecting value: line 2 column 1 (char 1)
